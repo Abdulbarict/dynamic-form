@@ -81,6 +81,7 @@ This will create the necessary tables and seed sample form data.
 
 ```bash
 npm install
+npm install --save-dev laravel-mix
 npm run dev
 ```
 
