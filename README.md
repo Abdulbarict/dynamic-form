@@ -94,6 +94,15 @@ php artisan serve
 
 Then visit: http://localhost:8000
 
+## 🔐 Demo Credentials
+
+Use the following credentials to log in as an admin:
+
+-   **Email**: `admin@example.com`
+-   **Password**: `password`
+
+> ⚠️ For security, be sure to change or remove this account in production.
+
 ## Queue & Jobs
 
 To enable Laravel's queue system using the database driver:
