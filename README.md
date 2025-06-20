@@ -52,3 +52,68 @@ composer install
 cp .env.example .env
 php artisan key:generate
 ```
+
+Update .env with your database credentials:
+
+```bash
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+```
+
+### 4. Set up the database
+
+```bash
+
+php artisan migrate
+php artisan db:seed
+
+```
+
+This will create the necessary tables and seed sample form data.
+
+### 5. Install frontend dependencies
+
+```bash
+npm install
+npm run dev
+```
+
+Use npm run build for production.
+
+### 6. Serve the application
+
+```bash
+php artisan serve
+```
+
+Then visit: http://localhost:8000
+
+## Queue & Jobs
+
+To enable Laravel's queue system using the database driver:
+
+### 1. Update .env:
+
+```bash
+QUEUE_CONNECTION=database
+```
+
+### 2. Generate required table:
+
+```bash
+php artisan queue:table
+php artisan migrate
+
+```
+
+### 3. Run the queue worker:
+
+```bash
+php artisan queue:work
+```
